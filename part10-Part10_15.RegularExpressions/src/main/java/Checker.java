@@ -26,11 +26,9 @@ public class Checker {
 
     public boolean timeOfDay(String string) {
         //had to read this info else where as I didn't find the reading matierlaon  mooc.fi enought. I used java core vol 2
-        if (string.matches("(?:[01]\\d|2[0123]):(?:[012345]\\d):(?:[012345]\\d)")) {    //:? to not cap ':' only in parthese group
-            return true;
-        }
-        return false;
-
+        String time = "(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])";
+        return string.matches(time);
+        //you just had to get creative. you didn't need to find other material.
     }
 
 }
